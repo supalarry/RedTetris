@@ -23,8 +23,8 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - Browser [e.g. chrome, safari]
+**Environment**
+If applicable, specify using which browser, operating system the bug occurs
 
 **Additional context**
 Add any other context about the problem here.
