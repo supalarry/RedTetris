@@ -1,0 +1,24 @@
+version: "3"
+services:
+  frontend-develop:
+    container_name: frontend-develop
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      - .:/app
+  frontend-test:
+    container_name: frontend-test
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["yarn", "test"]
+    # so now if we change source file for test which is in volume, test suite reruns
+    # but the thing is that we cannot give test suite orders if it is launched as second
+    # container
